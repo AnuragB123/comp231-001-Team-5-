@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewpoint" content="width=device-width, intial-scale=1.0">
-    <title>All in One Study App Login Page</title>
-    <link rel="stylesheet" href="sign-in.css">
-    <script defer src="sign-in.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="sign-in.css">
+  <script defer src="sign-in.js"></script>
 </head>
 
 <body>
-    <main id="sign-in-main-area">
-        <h1 id="sign-in-header"> Login </h1>
-
-        <div id="sign-in-error=msg-holder">
-            <p id="sign-in-error-msg">Invalid username <span id="sign-in-error-msg-second-line">and/or password</span></p>
-        </div>
-
-        <form id="login-form">
-            <input type="text" name="username" id="username-field" class="sign-in--field" placeholder="UserName">
-            <input type="password" name="password" id="password-field" class="login-form-field" placeholder="PassWord">
-            <input type="submit" value="Login" id="sign-in-form-submit">
-        </form>
-    </main>
+  <main id="sign-in-main-holder">
+    <h1 id="sign-in-header">Login</h1>
+    
+    <div id="sign-in-error-msg-holder">
+      <p id="sign-in-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+    </div>
+    
+    <form id="sign-in-form">
+      <input type="text" name="username" id="username-field" class="sign-in-form-field" placeholder="Username">
+      <input type="password" name="password" id="password-field" class="sign-in-form-field" placeholder="Password">
+      <input type="submit" value="Login" id="sign-in-form-submit">
+    </form>
+  
+  </main>
 </body>
+
 </html>
