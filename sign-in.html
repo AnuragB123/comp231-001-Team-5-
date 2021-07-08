@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, intial-scale=1.0">
+    <title>All in One Study App Login Page</title>
+    <link rel="stylesheet" href="sign-in.css">
+    <script defer src="sign-in.js"></script>
+</head>
+
+<body>
+    <main id="sign-in-main-area">
+        <h1 id="sign-in-header"> Login </h1>
+
+        <div id="sign-in-error=msg-holder">
+            <p id="sign-in-error-msg">Invalid username <span id="sign-in-error-msg-second-line">and/or password</span></p>
+        </div>
+
+        <form id="login-form">
+            <input type="text" name="username" id="username-field" class="sign-in--field" placeholder="UserName">
+            <input type="password" name="password" id="password-field" class="login-form-field" placeholder="PassWord">
+            <input type="submit" value="Login" id="sign-in-form-submit">
+        </form>
+    </main>
+</body>
+</html>
