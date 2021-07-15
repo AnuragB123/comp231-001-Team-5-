@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Sign In</title>
+        <!-- Include CSS File Here -->
+        <link rel="stylesheet" href="signIn.css"/>
+        <!-- Include JS File Here -->
+        <script src="signin.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="main">
+                <h2>Sign In</h2>
+                <form id="form_id" method="post" name="myform">
+                    <label>User Type :</label>
+                    <select id="userType" name="userType">
+                        <option value="student">Student</option>
+                        <option value="instructor">Instructor</option>
+                        <option value="adminstrator">Adminstrator</option>
+                    </select>
+                    <br></br>
+                    <label>User Name :</label>
+                    <input type="text" name="username" id="username"/>
+                    <label>Password :</label>
+                    <input type="password" name="password" id="password"/>
+                    <input type="button" value="Sign In" id="submit" onclick="validate()"/>
+                    <br><br>
+                    <input type="button" value="Sign Up" id="SignUp_submit" onclick="validate_SignUp()"/>
+                </form>
+            </div>
+        </div>
+    </body>
+    </html>
