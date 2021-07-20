@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>Home Screen</title>
+    <!--Include CSS File-->
+    <link rel="stylesheet" href="grader.css">
+    <!-- Include JS File Here -->
+    <script src="grader.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <h2>Grader</h2>
+            <!--Sample Subjects-->
+           <form>
+               Mathematics: <input type="number" id="subject1" name="Mathematics"><br>
+               Sciences: <input type="number" id="subject2" name="Sciences"><br>
+               Writing: <input type="number" id="subject3" name="Writing"><br>
+               Music: <input type="number" id="subject4" name="Music"><br>
+               Total Grade: <input type="number" id="totalGrade" name="totalGrade"><br>
+               Average Grade: <input type="number" id="avgGrade" name="averageGrade"><br>
+               <input type="button" value="Total Grade" onclick="calcTotalGrades()">
+               <input type="button" value="Average Grade" onclick="calcAvgGrades()">
+           </form>
+        </div>
+    </div>
+</body>
