@@ -9,5 +9,14 @@ function editAccount() {
 }
 
 function updateAccount() {
-    //Update the account's username and password - yet to figure out
+
+    var userName  = document.getElementById("username").value;
+    document.getElementById("UserName").innerHTML = userName;
+
+    var email = document.getElementById("email").value;
+    document.getElementById("Email").innerHTML = email;
+
+    var password = document.getElementById("password").value;
+    document.getElementById("Password").innerHTML = password;
+
 }

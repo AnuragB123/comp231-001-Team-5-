@@ -13,26 +13,23 @@
             <!--Sample Information-->
             <!--Will try to get this data from a server-->
             <label>User Type :</label>
-            <label>Student</label>
+            <label id="UserType">Student</label>
             <br></br>
             <label>User Name :</label>
-            <label>test</label>
+            <label id="UserName">test</label>
             <br></br>
+            <label>Email :</label>
+            <label id="Email">test@test.com</label>
             <label>Password :</label>
-            <label>test</label>
+            <label id="Password">test</label>
             <br></br>
             <input type="button" value="Edit Account Details" id="EditAccountDetails_submit" onclick="editAccount()"/>
-            <div id="editForm">
+            <div id="editForm" style="display:none">
                 <form id="editForm_form" method="POST" name="editForm">
-                    <label>User Type :</label>
-                    <select id="userType" name="userType">
-                        <option value="student">Student</option>
-                        <option value="instructor">Instructor</option>
-                        <option value="adminstrator">Adminstrator</option>
-                    </select>
-                    <br></br>
                     <label>User Name :</label>
                     <input type="text" name="username" id="username"/>
+                    <label>Email :</label>
+                    <input type="text" name="email" id="email"/>
                     <label>Password :</label>
                     <input type="password" name="password" id="password"/>
                     <input type="button" value="Update Account" id="submit" onclick="updateAccount()"/>
