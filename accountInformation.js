@@ -1,3 +1,4 @@
+//Function to show the Edit Details Account form
 function editAccount() {
     var editAccount = document.getElementById("editForm");
     if (editAccount.style.display === "none")
@@ -8,6 +9,7 @@ function editAccount() {
     }
 }
 
+//Function to allow users to update information
 function updateAccount() {
 
     var userName  = document.getElementById("username").value;
