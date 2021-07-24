@@ -1,3 +1,4 @@
+//This function allows to calculate the average of the grade
 function calcAvgGrades()
 {
     var subject1Grade = parseInt(document.getElementById("subject1").value);
@@ -7,6 +8,7 @@ function calcAvgGrades()
     document.getElementById("avgGrade").value = (subject1Grade + subject2Grade + subject3Grade + subject4Grade) / 4
 }
 
+//This function allows to present a letter grading for each subject score and the average grade
 function calcGrades()
 {
     var subject1Grade = parseInt(document.getElementById("subject1").value);
