@@ -1,0 +1,48 @@
+/*Styling the body of the page*/
+body {
+    margin: 0;
+    min-width: 250px;
+}
+*{
+    box-sizing: border-box;
+}
+
+/*Styling the list*/
+ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+
+    /*make the list item unselectable*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+/*Sets all odd list items to a different color*/
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+/* Style the header */
+h1 {
+    background-color: #f44336;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+
+label{
+    color: #464646;
+    text-shadow: 0 1px 0 #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
