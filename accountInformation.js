@@ -1,24 +1,20 @@
-//Function to show the Edit Details Account form
-function editAccount() {
-    var editAccount = document.getElementById("editForm");
-    if (editAccount.style.display === "none")
+function update_Profile()
+{
+        document.getElementById("h_name").innerHTML = document.getElementById("fullName").value;
+        document.getElementById("h_email").innerHTML = document.getElementById("email").value;
+        document.getElementById("h_phone").innerHTML = document.getElementById("phone").value;
+        document.getElementById("h_status").innerHTML = document.getElementById("status").value;
+}    
+function signOut()
     {
-        editAccount.style.display = "block";
-    } else {
-        editAccount.style.display = "none";
+      window.location = "signIn.html"; // Redirecting to other page.
+      return false;
     }
-}
-
-//Function to allow users to update information
-function updateAccount() {
-
-    var userName  = document.getElementById("username").value;
-    document.getElementById("UserName").innerHTML = userName;
-
-    var email = document.getElementById("email").value;
-    document.getElementById("Email").innerHTML = email;
-
-    var password = document.getElementById("password").value;
-    document.getElementById("Password").innerHTML = password;
-
-}
+function cancel()
+    {
+        document.getElementById("fullName").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("status").value = "";
+        return false;
+    }
