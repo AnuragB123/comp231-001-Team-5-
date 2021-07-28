@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <html>
     <head>
         <title>Sign In</title>
@@ -7,6 +9,17 @@
         <script src="admin.js"></script>
     </head>
     <body>
+        <!--Top Navigation Bar-->
+        <div class="topnav">
+            <a href="homeScreen.html">Home</a>
+            <a href="accountInformation.html">Profile</a>
+            <a href="checklist.html">Checklist</a>
+            <a href="">Calendar</a>
+            <a href="grader.html">Grader</a>
+            <a class="active" href="admin.html">Admin</a> <!--Will make it that only viewable when logged in as a Adminstrator-->
+            <a class="signOut" href="signIn.html">Sign Out</a>
+        </div>
+        <!--The Student List-->
         <h1>Student List :</h1>
         <ul id="StudentList">
             <!--Sample Students-->
@@ -61,6 +74,7 @@
                 <label>Student Email: </label> StudentEmail
             </div>
         </ul>
+        <!--The Instructor List-->
         <h1>Instructor List :</h1>
         <ul id="InstructorList">
             <!--Sample Instructors-->

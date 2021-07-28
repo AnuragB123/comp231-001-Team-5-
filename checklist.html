@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <title>Test </title>
      <!-- Include CSS File Here -->
@@ -7,6 +8,18 @@
      <script src="checklist.js"></script>
 </head>
 <body>
+    <!--Top Navigation Bar-->
+    <div class="topnav">
+        <a href="homeScreen.html">Home</a>
+        <a href="accountInformation.html">Profile</a>
+        <a class="active" href="checklist.html">Checklist</a>
+        <a href="">Calendar</a>
+        <a href="grader.html">Grader</a>
+        <a href="admin.html">Admin</a> <!--Will make it that only viewable when logged in as a Adminstrator-->
+        <a class="signOut" href="signIn.html">Sign Out</a>
+    </div>
+
+    <!--User Does the input and inputs to a specific type of Checklist-->
     <div id="main DIV" class="header">
         <h2 style="margin:5px">My To Do List</h2>
         <input type="text" id="myInput" placeholder="Title...">
@@ -85,6 +98,5 @@
                  ev.target.classList.toggle('checked');
                 }
             }, false);
- 
     </script>
 </body>
