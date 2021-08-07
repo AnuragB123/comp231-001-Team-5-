@@ -1,33 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>HOME</title>
     <link rel='stylesheet' href='stylesheets/style.css' />
-    
+
 
     <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-  </head>
-  <% include ./partials/nav.ejs %>
-  <body >
-    <% include ./partials/loginForm.ejs %>
-    <% include ./partials/registerForm.ejs %>
-    <div class="container" >
-      <h1>WELCOME "UserName" TO THE ALL IN ONE STUDY APPLICATION!</h1> <!--UserName will be replaced by the UserName of the Profile 
+</head>
+<% include ./partials/nav.ejs %>
+
+    <body>
+        <% include ./partials/loginForm.ejs %>
+            <% include ./partials/registerForm.ejs %>
+                <div class="container">
+                    <h1>WELCOME "UserName" TO THE ALL IN ONE STUDY APPLICATION!</h1>
+                    <!--UserName will be replaced by the UserName of the Profile 
         logged into the application-->
-    <p>Our Application is an All in One Study Application that has everything a student needs to time manage and work smartly</p>
-    <p>We have 3 Main Features: Checklist, Calendar and Grader</p>
-    <p>Checklist: Students and Instructors will be allowed to add different tasks to checklists and would be able to arrange them to three versions, To Do, Ongoing and Done</p>
-    <p>Calendar: Students and Instructors will be able to add "events" to the calendar to schedule events like classes, labs due dates, assignment due dates, test/quiz dates and more</p>
-    <p>Grader: Student and Instructors will be able to add their grades for their subjects and calculate what their average grade would be</p>
-    <img src="images/logo.jfif">
-    </div>
-    
-    
-    
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+                    <p>Our Application is an All in One Study Application that has everything a student needs to time manage and work smartly</p>
+                    <p>We have 3 Main Features: Checklist, Calendar and Grader</p>
+                    <p>Checklist: Students and Instructors will be allowed to add different tasks to checklists and would be able to arrange them to three versions, To Do, Ongoing and Done</p>
+                    <p>Calendar: Students and Instructors will be able to add "events" to the calendar to schedule events like classes, labs due dates, assignment due dates, test/quiz dates and more</p>
+                    <p>Grader: Student and Instructors will be able to add their grades for their subjects and calculate what their average grade would be</p>
+                    <img src="images/logo.jfif">
+                </div>
+
+                <script>
+                    // Example starter JavaScript for disabling form submissions if there are invalid fields
+                    (function() {
+                        'use strict';
+                        window.addEventListener('load', function() {
+                            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                            var forms = document.getElementsByClassName('needs-validation');
+                            // Loop over them and prevent submission
+                            var validation = Array.prototype.filter.call(forms, function(form) {
+                                form.addEventListener('submit', function(event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                }, false);
+                            });
+                        }, false);
+                    })();
+                </script>
+                <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+
 </html>

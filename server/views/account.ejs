@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <!--  This file has been downloaded from bootdey.com @bootdey on twitter -->
     <!--  All snippets are MIT license http://bootdey.com/license -->
@@ -8,142 +9,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="accountInformation.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="stylesheets/accountInformation.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
-  </head>
-  <% include ./partials/nav.ejs %>
-  <body>
-    <div class="container">
-      <div class="row gutters">
-        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
-          <div class="card h-100">
-            <div class="card-body">
-              <div class="account-settings">
-                <div class="user-profile">
-                  <div class="user-avatar">
-                    <img
-                      src="https://bootdey.com/img/Content/avatar/avatar7.png"
-                      alt="Maxwell Admin"
-                    />
-                  </div>
-                  <% if(cookies.user!=null) {%>
-                  <h5 id="h_name" class="user-name">
-                    <%= cookies.user.username %>
-                  </h5>
-                  <h6 id="h_email" class="user-email">
-                    <%= cookies.user.email %>
-                  </h6>
-                  <h6 id="h_phone" class="user-email">
-                    <%= cookies.user.phone %>
-                  </h6>
-                </div>
-                <div class="about">
-                  <h5>About</h5>
-                  <p>
-                    My name is <%= cookies.user.username %>. I am CS student and
-                    Front end developer/
-                  </p>
-                  <% } %>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
-          <div class="card h-100">
-            <div class="card-body">
-              <form method="POST" action="/updateUser">
-                <div class="row gutters">
-                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <g6 class="mb-2 text-primary">Personal Information</g6>
-                  </div>
+</head>
+<% include ./partials/nav.ejs %>
 
-                  <div
-                    class="
-                      form-group
-                      col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12
-                    "
-                  >
-                    <label for="fullName">Full Name</label>
-                    <input
-                      type="text"
-                      name="username"
-                      class="form-control"
-                      id="fullName"
-                      value="<%= cookies.user.username %>"
-                    />
-                  </div>
-                  <div
-                    class="
-                      form-group
-                      col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12
-                    "
-                  >
-                    <label for="userId">Id</label>
-                    <input
-                      type="text"
-                      name="userId"
-                      class="form-control"
-                      id="userId"
-                      value="<%= cookies.user.userId %>"
-                      readonly
-                    />
-                  </div>
-                  <div
-                    class="
-                      form-group
-                      col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12
-                    "
-                  >
-                    <label for="eMail">Email</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      name="email"
-                      value="<%= cookies.user.email %>"
-                    />
-                  </div>
-                  <div
-                    class="
-                      form-group
-                      col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12
-                    "
-                  >
-                    <label for="phone">Phone</label>
-                    <input
-                      type="tel"
-                      class="form-control"
-                      id="phone"
-                      name="phone"
-                      value="<%= cookies.user.phone %>"
-                    />
-                  </div>
+    <body>
+        <div class="container">
+            <div class="row gutters">
+                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="account-settings">
+                                <div class="user-profile">
+                                    <div class="user-avatar">
+                                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Maxwell Admin" />
+                                    </div>
+                                    <% if(cookies.user!=null) {%>
+                                        <h5 id="h_name" class="user-name">
+                                            <%= cookies.user.username %>
+                                        </h5>
+                                        <h6 id="h_email" class="user-email">
+                                            Email:
+                                            <%= cookies.user.email %>
+                                        </h6>
+                                        <h6 id="h_phone" class="user-phone">
+                                            Contact:
+                                            <%= cookies.user.phone %>
+                                        </h6>
+                                        <h6>
+                                            I am a
+                                            <%= cookies.user.userType %>
+                                        </h6>
+                                </div>
+                                <div class="about">
+                                    <h5>About</h5>
+                                    <p>
+                                        My name is
+                                        <%= cookies.user.username %>. I am CS
+                                            <%= cookies.user.userType %> and Front end developer.
+                                    </p>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="row gutters">
-                  <div
-                    class="
+                <% if(cookies.user!=null){ %>
+                    <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <form method="POST" action="/updateUser" class="needs-validation" novalidate>
+                                    <div class="row gutters">
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                            <g6 class="mb-2 text-primary">Personal Information</g6>
+                                        </div>
+
+                                        <div class="
+                      form-group
+                      col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12
+                    ">
+                                            <label for="fullName">Full Name</label>
+                                            <input type="text" name="username" class="form-control" id="fullName" value="<%= cookies.user.username %>" />
+                                            <div class="invalid-feedback">
+                                                Username can not be empty.
+                                            </div>
+                                        </div>
+                                        <div class="
+                      form-group
+                      col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12
+                    ">
+                                            <label for="userId">Id</label>
+                                            <input type="text" name="userId" class="form-control" id="userId" value="<%= cookies.user.userId %>" readonly />
+                                        </div>
+                                        <div class="
+                      form-group
+                      col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12
+                    ">
+                                            <label for="eMail">Email</label>
+                                            <input type="email" class="form-control" id="email" name="email" value="<%= cookies.user.email %>" />
+                                            <div class="invalid-feedback">
+                                                Email should end with @abc.com
+                                            </div>
+                                        </div>
+                                        <div class="
+                      form-group
+                      col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12
+                    ">
+                                            <label for="phone">Phone</label>
+                                            <input type="tel" class="form-control" maxLength="10" minlength="10" id="phone" name="phone" value="<%= cookies.user.phone %>" />
+                                            <div class="invalid-feedback">
+                                                Phone number ust be 10 digits.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row gutters">
+                                        <div class="
                       form-group
                       text-right
                       col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12
-                    "
-                  >
-                    <input
-                      type="submit"
-                      class="btn btn-primary"
-                      value="Update"
-                    />
-                  </div>
-                </div>
-              </form>
+                    ">
+                                            <input type="submit" class="btn btn-primary" value="Update" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </body>
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function() {
+                'use strict';
+                window.addEventListener('load', function() {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function(form) {
+                        form.addEventListener('submit', function(event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();
+        </script>
+    </body>
+
 </html>
