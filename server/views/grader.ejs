@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <title>Home Screen</title>
+    <!--Include CSS File-->
+    <link rel="stylesheet" href="stylesheets/grader.css">
+    <!-- Include JS File Here -->
+    <script src="javascript/grader.js"></script>
+</head>
+<body>
+    <!--The Top Navigation Bar-->
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a href="/account">Profile</a>
+        <a href="/checklist">Checklist</a>
+        <a href="">Calendar</a>
+        <a class="active" href="grader.html">Grader</a>
+        <a href="">Admin</a> <!--Will make it that only viewable when logged in as a Adminstrator-->
+        
+    </div>
+    <div class="container">
+        <div class="main">
+            <h2>Grader</h2>
+            <!--Sample Subjects-->
+            <!--Grader form-->
+           <form>
+               Mathematics: <input type="number" id="subject1" name="Mathematics"><br>
+               Grade: <input type="text" id="letterGrade1" name="letterGrader"><br>
+               Sciences: <input type="number" id="subject2" name="Sciences"><br>
+               Grade: <input type="text" id="letterGrade2" name="letterGrader"><br>
+               Writing: <input type="number" id="subject3" name="Writing"><br>
+               Grade: <input type="text" id="letterGrade3" name="letterGrader"><br>
+               Music: <input type="number" id="subject4" name="Music"><br>
+               Grade: <input type="text" id="letterGrade4" name="letterGrader"><br>
+               Average Grade: <input type="number" id="avgGrade" name="averageGrade"><br>
+               Grade: <input type="text" id="letterGrade5" name="letterGrader"><br>
+               <input type="button" value="Average Grade" onclick="calcAvgGrades()">
+               <input type="button" value="Letter Grade" onclick="calcGrades()">
+           </form>
+        </div>
+    </div>
+</body>
